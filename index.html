@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>نازنین جونم</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Tahoma", sans-serif;
+      background: #fff0f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container {
+      max-width: 420px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3);
+      padding: 24px;
+      text-align: center;
+    }
+    .msg {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      line-height: 1.8;
+      color: #333;
+    }
+    button {
+      display: inline-block;
+      margin: 10px auto;
+      padding: 14px 20px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #ff7aa2, #ffd66b);
+      color: #4b2c3d;
+      cursor: pointer;
+      box-shadow: 0 6px 14px rgba(255, 122, 162, 0.35);
+      transition: transform 0.1s ease;
+    }
+    button:active { transform: scale(0.95); }
+    .hidden { display: none; }
+    .telegram {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 18px;
+      background: #eaf7ff;
+      color: #2b4772;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: bold;
+      box-shadow: 0 6px 12px rgba(126,200,255,.25);
+    }
+    img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://placekitten.com/300/200" alt="گربه ناز">
+    <img src="https://place-puppy.com/300x200" alt="خرگوش خوشگل">
+
+    <div id="message" class="msg">نازنین جونم خوش اومدی 💖</div>
+    <button id="btn1">بزن رو من 😊</button>
+    <button id="btn2" class="hidden">بعدیش رو ببین ✨</button>
+    <button id="btn3" class="hidden">آخرین حرف دلم 💌</button>
+    <div id="final" class="hidden">
+      <div class="msg">
+        حالا وقتشه بیای پیوی و لباتو بدی قربونت برم 😘💋💋💋  
+      </div>
+      <a class="telegram" href="tg://resolve?domain=S1a2fiu">روی این کلیک کن تا برگردی پیشم عزیزم 💖</a>
+    </div>
+  </div>
+
+  <script>
+    const msg = document.getElementById('message');
+    const btn1 = document.getElementById('btn1');
+    const btn2 = document.getElementById('btn2');
+    const btn3 = document.getElementById('btn3');
+    const final = document.getElementById('final');
+
+    btn1.addEventListener('click', () => {
+      msg.textContent = 'سلام قشنگ‌ترین هدیهٔ زندگیم 💫';
+      btn1.classList.add('hidden');
+      btn2.classList.remove('hidden');
+    });
+
+    btn2.addEventListener('click', () => {
+      msg.textContent = 'تو تنها دلیل زندگیم هستی، خیلی دوستت دارم ❤️';
+      btn2.classList.add('hidden');
+      btn3.classList.remove('hidden');
+    });
+
+    btn3.addEventListener('click', () => {
+      msg.textContent = 'بوس‌بوس کنار قلب منی، همیشه و برای همیشه 💞';
+      btn3.classList.add('hidden');
+      final.classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
