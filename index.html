@@ -1,0 +1,191 @@
+Python 3.13.9 (tags/v3.13.9:8183fa5, Oct 14 2025, 14:09:13) [MSC v.1944 64 bit (AMD64)] on win32
+Enter "help" below or click "Help" above for more information.
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>نازنین جونم</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --pink:#ff7aa2;
+      --yellow:#ffd66b;
+      --mint:#9ef7d0;
+      --blue:#7ec8ff;
+      --bg:#fff5fb;
+      --text:#3e3155;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family:"Vazirmatn","Fredoka",system-ui;
+      background:
+        radial-gradient(40px 40px at 10% 10%, #ffd7e8 0 30px, transparent 31px),
+        radial-gradient(50px 50px at 80% 20%, #d9fff1 0 40px, transparent 41px),
+        radial-gradient(60px 60px at 20% 80%, #e0f2ff 0 50px, transparent 51px),
+        var(--bg);
+      color:var(--text);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+    .container{
+      width:100%;
+      max-width:720px;
+      background:white;
+      border-radius:28px;
+      box-shadow: 0 12px 30px rgba(255,122,162,0.25);
+      overflow:hidden;
+      position:relative;
+    }
+    .header{
+      background: linear-gradient(135deg, var(--pink), var(--yellow));
+      color:#4b2c3d;
+      padding:20px 24px;
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .cat{
+      width:42px; height:42px; flex:0 0 42px;
+      border-radius:50%;
+      background: url('https://images.unsplash.com/photo-1518791841217-8f162f1e1131?q=80&w=300&auto=format&fit=crop') center/cover no-repeat;
+      box-shadow:0 6px 14px rgba(0,0,0,0.15);
+      border:3px solid rgba(255,255,255,0.8);
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float{
+      0%,100%{transform: translateY(0)}
+      50%{transform: translateY(-6px)}
+    }
+    .title{
+      font-family:"Fredoka","Vazirmatn";
+      font-size:1.2rem; font-weight:600;
+    }
+    .content{
+      padding:28px;
+      display:grid;
+      gap:18px;
+    }
+    .card{
+      background: #fff8fb;
+      border:2px dashed #ffc1d6;
+      border-radius:22px;
+      padding:22px;
+      text-align:center;
+      position:relative;
+    }
+    .msg{
+      font-size:1.35rem;
+      line-height:1.9;
+    }
+    .btns{
+      display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:12px;
+    }
+    button{
+      appearance:none; border:none; cursor:pointer;
+      padding:12px 18px;
+      border-radius:16px;
+      font-size:1rem; font-weight:700;
+      color:#47263b;
+      background: linear-gradient(135deg, var(--mint), var(--blue));
+      box-shadow: 0 10px 18px rgba(126,200,255,0.35);
+      transition: transform .08s ease, box-shadow .2s ease, filter .2s ease;
+    }
+    button:hover{
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+      box-shadow:0 14px 24px rgba(126,200,255,0.4);
+    }
+    button:active{ transform: translateY(0) scale(.98) }
+    .kisses{
+      display:flex; gap:10px; justify-content:center; align-items:center; margin-top:14px;
+      opacity:0; transform: translateY(8px); transition: .25s ease;
+    }
+    .kisses.show{ opacity:1; transform: translateY(0); }
+    .emoji{
+      font-size:1.8rem; filter: drop-shadow(0 4px 8px rgba(255,122,162,.35));
+      animation: pop .6s ease both;
+    }
+    @keyframes pop{
+      0%{transform: scale(.6); opacity:.2}
+      100%{transform: scale(1); opacity:1}
+    }
+    .footer{
+      padding:10px 18px 18px; text-align:center; color:#7a5a73;
+      font-size:.95rem;
+    }
+    .telegram{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 14px; border-radius:12px; background:#eaf7ff; color:#2b4772; text-decoration:none; font-weight:700;
+      box-shadow:0 8px 16px rgba(126,200,255,.25);
+    }
+    .telegram:hover{ filter:brightness(1.03) }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="cat" aria-hidden="true"></div>
+      <div class="title">SWEET CAT SPACE</div>
+    </div>
+
+    <div class="content">
+      <div class="card">
+        <div id="message" class="msg">نازنین جونم خوش اومدی 💖</div>
+
+        <div class="btns">
+          <button id="step1">بزن رو من 😊</button>
+          <button id="step2" disabled>بعدیش رو ببین ✨</button>
+          <button id="step3" disabled>آخرین حرف دلم 💌</button>
+        </div>
+
+        <div id="kisses" class="kisses" aria-hidden="true">
+          <span class="emoji">😘</span>
+          <span class="emoji">💖</span>
+          <span class="emoji">😘</span>
+        </div>
+      </div>
+
+      <div class="footer">
+        با عشق تقدیم به تو. اگر دوست داشتی این لینک تلگرام رو ببین:
+...         <br />
+...         <a id="tgLink" class="telegram" href="https://t.me/YourTelegramUsername" target="_blank" rel="noopener noreferrer">
+...           لینک تلگرام من 🌈
+...         </a>
+...       </div>
+...     </div>
+...   </div>
+... 
+...   <script>
+...     const msg = document.getElementById('message');
+...     const step1 = document.getElementById('step1');
+...     const step2 = document.getElementById('step2');
+...     const step3 = document.getElementById('step3');
+...     const kisses = document.getElementById('kisses');
+... 
+...     step1.addEventListener('click', () => {
+...       msg.textContent = 'سلام قشنگ‌ترین هدیهٔ زندگیم 💫';
+...       step2.disabled = false;
+...     });
+... 
+...     step2.addEventListener('click', () => {
+...       msg.textContent = 'تو تنها دلیل زندگیم هستی، خیلی دوستت دارم ❤️';
+...       step3.disabled = false;
+...     });
+... 
+...     step3.addEventListener('click', () => {
+...       msg.textContent = 'بوس‌بوس کنار قلب منی، همیشه و برای همیشه 💞';
+...       kisses.classList.add('show');
+...     });
+... 
+...     // اگر خواستی لینک تلگرام رو راحت‌تر عوض کنی:
+...     // فقط این مقدار رو تغییر بده:
+...     const TELEGRAM_URL = 'https://t.me/YourTelegramUsername'; // اینو کن لینک خودت
+...     document.getElementById('tgLink').href = TELEGRAM_URL;
+...   </script>
+... </body>
+... </html>
