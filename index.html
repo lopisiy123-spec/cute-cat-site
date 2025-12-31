@@ -66,8 +66,10 @@
 </head>
 <body>
   <div class="container">
-    <!-- عکس گربه -->
-    <img id="catImage" src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6" alt="گربه ناز">
+    <!-- عکس‌های گربه -->
+    <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6" alt="گربه ناز">
+    <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131" alt="گربه خوشگل">
+    <img src="https://images.unsplash.com/photo-1561948955-570b270e7c36" alt="گربه بامزه">
 
     <div id="message" class="msg">نازنین جونم خوش اومدی 💖</div>
     <button id="btn1">بزن رو من 😊</button>
@@ -83,7 +85,6 @@
 
   <script>
     const msg = document.getElementById('message');
-    const catImage = document.getElementById('catImage');
     const btn1 = document.getElementById('btn1');
     const btn2 = document.getElementById('btn2');
     const btn3 = document.getElementById('btn3');
@@ -91,21 +92,18 @@
 
     btn1.addEventListener('click', () => {
       msg.textContent = 'سلام قشنگ‌ترین هدیهٔ زندگیم 💫';
-      catImage.src = "https://images.unsplash.com/photo-1518791841217-8f162f1e1131"; // عکس جدید
       btn1.classList.add('hidden');
       btn2.classList.remove('hidden');
     });
 
     btn2.addEventListener('click', () => {
       msg.textContent = 'تو تنها دلیل زندگیم هستی، خیلی دوستت دارم ❤️';
-      catImage.src = "https://images.unsplash.com/photo-1561948955-570b270e7c36"; // عکس جدید
       btn2.classList.add('hidden');
       btn3.classList.remove('hidden');
     });
 
     btn3.addEventListener('click', () => {
       msg.textContent = 'بوس‌بوس کنار قلب منی، همیشه و برای همیشه 💞';
-      catImage.src = "https://images.unsplash.com/photo-1555685812-4b943f1cb0eb"; // عکس جدید
       btn3.classList.add('hidden');
       final.classList.remove('hidden');
     });
